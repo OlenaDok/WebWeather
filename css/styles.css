@@ -1,0 +1,238 @@
+body {
+    font: 15px Montserrat, sans-serif;
+    line-height: 1.3;
+    color: #444;
+    background: url("../img/back/b.jpg");
+    background-size: 100%;
+}
+
+.header, .footer {
+    opacity: 0.8;
+    color: #ffe;
+    background: -webkit-linear-gradient(cornflowerblue, dimgrey);
+    background: -o-linear-gradient(cornflowerblue, dimgrey);
+    background: -moz-linear-gradient(cornflowerblue, dimgrey);
+    background: linear-gradient(cornflowerblue, dimgrey);
+}
+.header {
+    padding:15px 10px;
+    font-size: 1.75em;
+    text-align: center;
+    height: 65px;
+}
+
+.main_content {
+    padding: 1%;
+    border: dashed 0.2px;
+    margin: 1%;
+    background-color: #ffffff;
+}
+
+.search_section {
+    align-content: center;
+    padding: 1%;
+}
+
+.container-fluid {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.footer {
+    opacity: 0.8;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#chart {
+    width: auto;
+    height: auto;
+    align-self: center;
+}
+
+#data{
+    margin: 0;
+    padding: 0;
+}
+#btn {
+    background: #517ea0;
+    background-image: -webkit-linear-gradient(top, #517ea0, #2980b9);
+    background-image: -moz-linear-gradient(top, #517ea0, #2980b9);
+    background-image: -ms-linear-gradient(top, #517ea0, #2980b9);
+    background-image: -o-linear-gradient(top, #517ea0, #2980b9);
+    background-image: linear-gradient(to bottom, #517ea0, #2980b9);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-shadow: 6px 6px 9px #1b18a3;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 3px 31px 3px 31px;
+    border: solid #6877b3 3px;
+    text-decoration: none;
+}
+
+#btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+input[type="text"] {
+    border: solid 1px #665cff;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+    border: solid 1px #6495ed;
+    box-shadow: 0 0 5px 1px #517ea0;
+}
+
+table {
+    position: relative;
+    width: 100%;
+    border: groove;
+    text-align: center;
+    background: #517ea0;
+    color: #fff;
+    border-radius: .4em;
+    border-left: double;
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+}
+
+table th, td {
+    border: none;
+}
+
+table#dop {
+    border-radius: .4em;
+}
+
+.wt tr:hover{
+    background-color: #b2b2ff;
+    box-shadow: #1b18a3;
+}
+
+.wt tr.selected {
+    background: none repeat scroll 0 0 #b3ff8a;
+    box-shadow: #1b18a3;
+    color: #000;
+}
+
+th, td {
+    margin: .5em 1em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 1em;
+}
+
+#chart {
+    float: none;
+    -webkit-align-content: center;
+    align-content: center;
+    max-width: inherit;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+
+}
+#pressure, #humidity, #wind {
+    height: 1.5em;
+    width: 15.5em;
+}
+
+.current_weather, .forecast{
+    padding: 2%;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+#dayData, #descr {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 25px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+}
+
+#city {
+    font-family: "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 28px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1px;
+    -webkit-margin-after: 1px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+@media only screen and (max-width : 720px) {
+    body {
+        font-family: "Segoe UI", sans-serif;
+        font-size: 18px;
+    }
+
+    .header {
+        font-size: 15px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        height: 47px;
+    }
+    .forecast {
+        font-size: 12px;
+        padding: 2%;
+        overflow-x: auto;
+    }
+
+    .forecast td{
+        font-size: 10px;
+        padding: 2%;
+        overflow-x: auto;
+    }
+
+    .forecast th{
+        font-size: 11px;
+        padding: 2%;
+        overflow-x: auto;
+    }
+
+    .search_section .form{
+        padding-left: 10%;
+        align-content: stretch;
+    }
+
+    .search_section .form{
+        display: inline-flex;
+        align-content: flex-start;
+    }
+    .search_button {
+        width: 1px;
+        align-content: center;
+        margin: 0;
+        display: block;
+    }
+    .search_section .verb{
+        display: none;
+        width: 30%;
+    }
+    .search_section #cityForSearch{
+        width: 145%;
+    }
+
+}

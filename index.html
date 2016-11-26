@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get Weather</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+    </script>
+</head>
+<body>
+<header class="container-fluid text-center header">
+    This is my personal site for display weather in my city
+</header>
+<p id="info"></p>
+<section class="main_content">
+    <section class="container-fluid search_section">
+        <article class="form col-lg-offset-4">
+            <section class="col-sm-4">
+                <input class="form-control" type="text" id="cityForSearch">
+            </section>
+            <button id="btn" class="btn btn-primary btn-md col-sm-2 search_button">
+                <span class="glyphicon glyphicon-search"></span>
+                <span class="verb">Search</span>
+            </button>
+        </article>
+    </section>
+
+    <section class="row">
+        <article class="container-fluid text-center current_weather col-sm-4">
+            <div id="city"></div><br>
+            <div id="dayData"></div><br>
+            <div id="icon"></div>
+            <div id="descr"></div>
+            <table id="dop" class="container-fluid text-center">
+                <tr>
+                    <th>pressure</th>
+                    <td id="pressure"></td>
+                </tr>
+                <tr>
+                    <th>humidity</th>
+                    <td id="humidity" width="3em" height="3em"></td>
+                </tr>
+                <tr>
+                    <th >wind [speed]</th>
+                    <td id="wind" ></td>
+                </tr>
+            </table>
+        </article>
+        <article class="container-fluid text-center forecast col-sm-8 table-responsive">
+            <table id="tableWeather" class="wt container-fluid">
+                <tbody>
+                <thead >
+                    <th>*</th>
+                    <th id="0"></th>
+                    <th id="1"></th>
+                    <th id="2"></th>
+                    <th id="3"></th>
+                    <th id="4"></th>
+                    <th id="5"></th>
+                    <th id="6"></th>
+                </thead>
+
+                <tr id="day">
+                    <th data-label="DAY">DAY</th>
+                    <td id="d0"></td>
+                    <td id="d1"></td>
+                    <td id="d2"></td>
+                    <td id="d3"></td>
+                    <td id="d4"></td>
+                    <td id="d5"></td>
+                    <td id="d6"></td>
+                </tr>
+                <tr id="night">
+                    <th data-label="NIGHT">NIGHT</th>
+                    <td id="n0"></td>
+                    <td id="n1"></td>
+                    <td id="n2"></td>
+                    <td id="n3"></td>
+                    <td id="n4"></td>
+                    <td id="n5"></td>
+                    <td id="n6"></td>
+                </tr>
+                <tr id="max">
+                    <th data-label="MAX">MAX</th>
+                    <td id="max0"></td>
+                    <td id="max1"></td>
+                    <td id="max2"></td>
+                    <td id="max3"></td>
+                    <td id="max4"></td>
+                    <td id="max5"></td>
+                    <td id="max6"></td>
+                </tr>
+                <tr id="min">
+                    <th data-label="MIN">MIN</th>
+                    <td id="min0"></td>
+                    <td id="min1"></td>
+                    <td id="min2"></td>
+                    <td id="min3"></td>
+                    <td id="min4"></td>
+                    <td id="min5"></td>
+                    <td id="min6"></td>
+                </tr>
+                <tr id="pres">
+                    <th>PRESSURE</th>
+                    <td id="p0"></td>
+                    <td id="p1"></td>
+                    <td id="p2"></td>
+                    <td id="p3"></td>
+                    <td id="p4"></td>
+                    <td id="p5"></td>
+                    <td id="p6"></td>
+                </tr>
+                <tr id="hum">
+                    <th>HUMIDITY</th>
+                    <td id="h0"></td>
+                    <td id="h1"></td>
+                    <td id="h2"></td>
+                    <td id="h3"></td>
+                    <td id="h4"></td>
+                    <td id="h5"></td>
+                    <td id="h6"></td>
+                </tr>
+                </tbody>
+
+            </table>
+            <div id="chart"></div>
+        </article>
+    </section>
+    <div id="data"></div>
+</section>
+
+<footer class="container-fluid text-center footer">
+    <p>
+        &copy;LenaD
+    </p>
+</footer>
+<script src="./js/script.js"></script>
+<script src="./js/graphs.js"></script>
+</body>
+</html>
